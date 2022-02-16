@@ -20,15 +20,11 @@ public class PessoaController {
     @GetMapping
     public ResponseEntity<List<Pessoa>> listar(){
 
-        System.out.println("[LOG] => método listar() foi chamado!!!");
-
         return ResponseEntity.ok(service.listar());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Pessoa> buscarPorId(@PathVariable("id") Long id){
-
-        System.out.println("[LOG] => método buscarPorId() foi chamado!!!");
 
         Optional<Pessoa> optionalPessoa = service.buscarPor(id);
         if(!optionalPessoa.isPresent()) {
@@ -41,15 +37,11 @@ public class PessoaController {
     @PostMapping
     public ResponseEntity<Pessoa> adicionar(@RequestBody Pessoa pessoa){
 
-        System.out.println("[LOG] => método adicionar() foi chamado!!!");
-
         return ResponseEntity.ok(service.salvar(pessoa));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Pessoa> atualizar(@RequestBody Pessoa request, @PathVariable("id") Long id){
-
-        System.out.println("[LOG] => método atualizar() foi chamado!!!");
 
         Optional<Pessoa> optionalPessoa = service.buscarPor(id);
         if(!optionalPessoa.isPresent()) {
