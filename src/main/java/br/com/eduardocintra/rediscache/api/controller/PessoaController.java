@@ -18,14 +18,17 @@ public class PessoaController {
     private PessoaService service;
 
     @GetMapping
-    public ResponseEntity<List<Pessoa>> listarPessoas(){
+    public ResponseEntity<List<Pessoa>> listar(){
+
+        System.out.println("[LOG] => método listar() foi chamado!!!");
+
         return ResponseEntity.ok(service.listar());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Pessoa> listar(@PathVariable("id") Long id){
+    public ResponseEntity<Pessoa> buscarPorId(@PathVariable("id") Long id){
 
-        System.out.println("[LOG] => método listar() foi chamado!!!");
+        System.out.println("[LOG] => método buscarPorId() foi chamado!!!");
 
         Optional<Pessoa> optionalPessoa = service.buscarPor(id);
         if(!optionalPessoa.isPresent()) {
