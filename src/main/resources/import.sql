@@ -1,0 +1,5 @@
+insert into pessoa (nome, sobrenome, nascimento, cpf) values ('José', "Felipe", "1988-08-04", "063.664.210-05")
+insert into pessoa (nome, sobrenome, nascimento, cpf) values ('Marcela', "Nunes", "1990-04-10", "263.779.890-40")
+insert into pessoa (nome, sobrenome, nascimento, cpf) values ('Eduardo', "Cintra", "1989-08-21", "940.392.960-01")
+insert into pessoa (nome, sobrenome, nascimento, cpf) values ('Ana', "Beatriz", "1995-01-15", "131.396.220-15")
+insert into pessoa (nome, sobrenome, nascimento, cpf) values ('Viviane', "Marques", "2000-05-22", "444.925.560-79")
